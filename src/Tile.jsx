@@ -7,28 +7,31 @@ export function Tile({ content: Content, flip, state }) {
         <Box
           onClick={flip}
           display="inline-block"
-          width={8}
-          height={8}
-          textAlign="center"
-          bg="gray.500"
+          width="75px"
+          height="75px"
+         alignItems="center"
+          bg="green.300"
+          borderRadius={10}
         >
-          ?
+          
         </Box>
       );
     case "flipped":
       return (
         <Box
           display="inline-block"
-          width={8}
-          height={8}
+          width="75px"
+          height="75px"
           textAlign="center"
-          bg="yellow.500"
+          bg="green.500"
+          color="white"
+          borderRadius={5}
         >
           <Content
             style={{
               display: "inline-block",
-              width: "100%",
-              height: "100%",
+              width: "60px",
+              height: "75px",
               verticalAlign: "top",
             }}
           />
@@ -38,17 +41,18 @@ export function Tile({ content: Content, flip, state }) {
       return (
         <Box
           display="inline-block"
-          width={8}
-          height={8}
+          width="100%"
+          height="100%"
           textAlign="center"
-          color="gray.300"
+          color="green.100"
         >
           <Content
             style={{
               display: "inline-block",
-              width: "100%",
-              height: "100%",
+              width: "70%",
+              height: "70%",
               verticalAlign: "top",
+              margin:'10px'
             }}
           />
         </Box>
